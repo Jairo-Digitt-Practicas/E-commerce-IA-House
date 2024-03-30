@@ -1,0 +1,15 @@
+/**
+ * Estilos básicos para el contenedor del icono
+ *
+ * @format
+ */
+
+.babge {
+    background-color: red;
+    color: white;
+    position: absolute;
+    font-size: 12px;
+    padding: 2px 6px;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
