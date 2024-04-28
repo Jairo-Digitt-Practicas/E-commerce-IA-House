@@ -1,0 +1,6 @@
+/** @format */
+
+.imgCard img {
+    max-height: 300px;
+    width: auto;
+}
