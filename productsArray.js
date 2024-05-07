@@ -1,12 +1,14 @@
 /** @format */
 
+import producto1 from "../E-commerse-IA-House/src/assets/img/Productos/Eco Dot 1° generación.png";
+
 let productsArray = [
     {
         name: "Echo Dot 1° generación",
         precio: 999,
         id: 1,
         formato: "Producto",
-        img: "../src/assets/img/Productos/Eco Dot 1° generación.png",
+        img: producto1,
         especificaciones1: "Facil de instalar",
         especificaciones2: "Controla tus dispositivos con tu voz",
         especificaciones3: "Se enlaza con tu asistente (alexa)",

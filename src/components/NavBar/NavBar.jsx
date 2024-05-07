@@ -7,8 +7,9 @@ import NavDropdown from "react-bootstrap/NavDropdown";
 import Logo from "../../assets/img/Logo.png";
 import CartWidget from "../CartWidget/CartWidget";
 import { Link } from "react-router-dom";
+import "bootstrap/dist/css/bootstrap.min.css";
 
-function CollapsibleExample() {
+function NavBar() {
     return (
         <Navbar collapseOnSelect expand='lg' className='bg-body-tertiary'>
             <Container className='store-icon'>
@@ -69,7 +70,7 @@ function CollapsibleExample() {
                         <Nav.Link>
                             <Link
                                 className='menu-sobre-nosotros'
-                                to='/sobre-nosotros'>
+                                to='/sobrenosotros'>
                                 Sobre Nosotros
                             </Link>
                         </Nav.Link>
@@ -85,4 +86,4 @@ function CollapsibleExample() {
     );
 }
 
-export default CollapsibleExample;
+export default NavBar;

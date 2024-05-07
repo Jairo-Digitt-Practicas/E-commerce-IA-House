@@ -7,25 +7,44 @@ import productsArray from "../../../productsArray.js";
 
 function ItemDetailContainer() {
     const [product, setProduct] = useState(null);
-    let { idProduct } = useParams();
+    const { idProduct, idCategory } = useParams();
 
     useEffect(() => {
-        const selectedProduct = productsArray.find(
-            (Item) => Item.id === parseInt(idProduct)
-        );
-        console.log(productsArray);
-
-        if (selectedProduct) {
-            setProduct(selectedProduct);
-        } else {
-            console.error("Producto no encontrado");
+        if (idProduct) {
+            const selectedProduct = productsArray.find(
+                (item) => item.id === parseInt(idProduct)
+            );
+            if (selectedProduct) {
+                setProduct(selectedProduct);
+            } else {
+                console.error("Producto no encontrado");
+            }
         }
     }, [idProduct]);
 
+    useEffect(() => {
+        if (idCategory) {
+            const selectedProductCategory = productsArray.find(
+                (item) => item.category === parseInt(idCategory)
+            );
+            if (selectedProductCategory) {
+                setProduct(selectedProductCategory);
+            } else {
+                console.error("Categoria no encontrado");
+            }
+        }
+    }, [idCategory]);
+
     return (
         <>
-            <h2>Detalles del Producto</h2>
-            {product && <ItemDetail product={product} />}
+            {product ? (
+                <>
+                    <h2>Detalles del Producto</h2>
+                    <ItemDetail product={product} />
+                </>
+            ) : (
+                <h2>Categoría</h2>
+            )}
         </>
     );
 }
