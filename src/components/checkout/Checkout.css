@@ -1,0 +1,6 @@
+/** @format */
+
+.container-checkout h1 {
+    display: flex;
+    justify-content: center;
+}

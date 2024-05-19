@@ -1,0 +1,31 @@
+/** @format */
+
+.item-count {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-count p {
+    left: 20px;
+    margin: 5px;
+    display: flex;
+    position: relative;
+}
+
+.item-count button {
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.agregar-al-carrito {
+    display: flex;
+    align-items: center;
+}
+
+.card-Body {
+    display: flex;
+    justify-content: center;
+}

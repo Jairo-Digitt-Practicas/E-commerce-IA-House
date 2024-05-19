@@ -1,10 +1,24 @@
 /** @format */
 
-let productsArray = [
+import { addDoc, collection, getFirestore } from "firebase/firestore";
+import { initializeApp } from "firebase/app";
+
+const firebaseConfig = {
+    apiKey: "AIzaSyCCunjexLvpC60yMZ2sZ5KmHF0oO5nFCt0",
+    authDomain: "ia-house-6c7cf.firebaseapp.com",
+    projectId: "ia-house-6c7cf",
+    storageBucket: "ia-house-6c7cf.appspot.com",
+    messagingSenderId: "468241721646",
+    appId: "1:468241721646:web:ef72637b28c9894ad532bf",
+};
+
+const app = initializeApp(firebaseConfig);
+export const db = getFirestore(app);
+
+const products = [
     {
         name: "Echo Dot 1° generación",
         precio: 999,
-        id: 1,
         formato: "Producto",
         img: "../src/assets/img/Productos/Eco Dot 1° generación.png",
         especificaciones1: "Facil de instalar",
@@ -16,7 +30,6 @@ let productsArray = [
     {
         name: "Echo Dot 3° generación",
         precio: 1600,
-        id: 2,
         formato: "Producto",
         img: "../src/assets/img/Productos/Eco Dot 3° generación.png",
         especificaciones1: "Facil de instalar",
@@ -28,7 +41,6 @@ let productsArray = [
     {
         name: "Echo Dot 5° generación",
         precio: 2500,
-        id: 3,
         formato: "Producto",
         img: "../src/assets/img/Productos/Eco Dot 5° generación.png",
         especificaciones1: "Facil de instalar",
@@ -40,7 +52,6 @@ let productsArray = [
     {
         name: "Gen de hologramas",
         precio: 1999,
-        id: 4,
         formato: "Producto",
         img: "../src/assets/img/Productos/Generador de hologramas.png",
         especificaciones1: "Haz tus propios diseños",
@@ -52,7 +63,6 @@ let productsArray = [
     {
         name: "Luz RGB",
         precio: 300,
-        id: 5,
         formato: "Producto",
         img: "../src/assets/img/Productos/Luz RGB.png",
         especificaciones1: "Facil de instalar",
@@ -64,7 +74,6 @@ let productsArray = [
     {
         name: "Enchufe inteligente",
         precio: 400,
-        id: 6,
         formato: "Producto",
         img: "../src/assets/img/Productos/Enchufe inteligente.jpg",
         especificaciones1: "Facil de instalar",
@@ -76,7 +85,6 @@ let productsArray = [
     {
         name: "TP-Link Tapo C500",
         precio: 778,
-        id: 7,
         formato: "Producto",
         img: "../src/assets/img/Productos/TP-LINK.jpg",
         especificaciones1: "Cámara de Seguridad Wi-Fi para Exteriores",
@@ -88,7 +96,6 @@ let productsArray = [
     {
         name: "EASYTAO Q09",
         precio: 318,
-        id: 8,
         formato: "Producto",
         img: "../src/assets/img/Productos/EASYTAO.jpg",
         especificaciones1: "Camara de Seguridad WiFi",
@@ -100,7 +107,6 @@ let productsArray = [
     {
         name: "Dyson Purificador",
         precio: 13176,
-        id: 9,
         formato: "Producto",
         img: "../src/assets/img/Productos/DYSON PURIFICADOR.jpg",
         especificaciones1: "Detecta, captura y encierra",
@@ -112,4 +118,10 @@ let productsArray = [
     },
 ];
 
-export default productsArray;
+export const seedProducts = () => {
+    products.forEach((product) => {
+        addDoc(collection(db, "productos"), product);
+    });
+    console.log("productos añadidos");
+};
+// seedProducts();

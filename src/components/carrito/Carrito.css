@@ -1,0 +1,29 @@
+/** @format */
+
+.card-img {
+    width: 200px;
+}
+
+.end-carrito {
+    justify-content: center;
+    display: flex;
+}
+
+.end2-carrito {
+    justify-content: center;
+    display: flex;
+}
+
+.end2-carrito button {
+    margin-inline: 15px;
+}
+
+.end2-carrito a {
+    display: flex;
+    align-items: center;
+}
+
+.container-checkout h2 {
+    justify-content: center;
+    display: flex;
+}

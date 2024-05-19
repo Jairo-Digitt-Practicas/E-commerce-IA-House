@@ -12,11 +12,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 function NavBar() {
     return (
         <Navbar collapseOnSelect expand='lg' className='bg-body-tertiary'>
+            <div className='flex-grow-1 d-flex justify-content-center align-items-center'>
+                <CartWidget className='cart-widget' />
+            </div>
             <Container className='store-icon'>
-                <Navbar.Brand href='#home'>
-                    <img src={Logo} className='logo' alt='' />
+                <Navbar.Brand href='/'>
+                    <img src={Logo} className='logo' alt='/' />
                 </Navbar.Brand>
-                <CartWidget />
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='me-auto'>

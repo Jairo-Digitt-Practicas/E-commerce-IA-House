@@ -39,7 +39,7 @@ function Item({ product }) {
 }
 
 Item.propTypes = {
-    product: PropTypes.array.isRequired,
+    product: PropTypes.object.isRequired,
 };
 
 export default Item;
