@@ -18,7 +18,7 @@ function Item({ product }) {
             <div className='imgCard'>
                 <CardImg
                     alt='Card image cap'
-                    src={`../${product.img}`}
+                    src={`${product.img}`}
                     top='true'
                     width='100%'
                 />
