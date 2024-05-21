@@ -11,7 +11,6 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { CartProvider } from "./components/context/CartContext.jsx";
 import Carrito from "./components/carrito/Carrito.jsx";
 import Checkout from "./components/checkout/Checkout.jsx";
-import PropTypes from "prop-types";
 
 function App() {
     return (
@@ -27,13 +26,13 @@ function App() {
                             }
                         />
                         <Route
-                            path={`/categoria/:idCategory`}
+                            path='/categoria/:idCategory'
                             element={
                                 <ItemListContainer saludo='Revisa el detalle de nuestros productos' />
                             }
                         />
                         <Route
-                            path={`/detail/:idProduct`}
+                            path='/detail/:idProduct'
                             element={<ItemDetailContainer />}
                         />
                         <Route path='/promociones' element={<Promociones />} />
@@ -55,10 +54,5 @@ function App() {
         </>
     );
 }
-
-App.propTypes = {
-    idCategory: PropTypes.string.isRequired,
-    idProduct: PropTypes.string.isRequired,
-};
 
 export default App;
