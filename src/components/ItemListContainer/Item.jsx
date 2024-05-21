@@ -11,7 +11,6 @@ import {
 } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import "../ItemListContainer/Item.css";
-
 function Item({ product }) {
     return (
         <Card>

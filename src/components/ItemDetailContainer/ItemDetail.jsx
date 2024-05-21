@@ -29,7 +29,7 @@ function ItemDetail({ product }) {
                 <div className='imgCard'>
                     <CardImg
                         alt='Product Image'
-                        src={product.img}
+                        src={`../${product.img}`}
                         width='300px'
                     />
                 </div>
