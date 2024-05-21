@@ -26,13 +26,13 @@ function App() {
                             }
                         />
                         <Route
-                            path='/categoria/:idCategory'
+                            path={"/categoria/:${idCategory}"}
                             element={
                                 <ItemListContainer saludo='Revisa el detalle de nuestros productos' />
                             }
                         />
                         <Route
-                            path='/detail/:idProduct'
+                            path={"/detail/:${idProduct}"}
                             element={<ItemDetailContainer />}
                         />
                         <Route path='/promociones' element={<Promociones />} />
